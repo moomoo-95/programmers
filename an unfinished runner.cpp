@@ -1,7 +1,7 @@
-// ÇØ½Ã Level 1
+// í•´ì‹œ ì™„ì£¼í•˜ì§€ ëª»í•œì Level 1
 
-//¿ÏÁÖÇÏÁö ¸øÇÑÀÚ, participantº¤ÅÍ ³» ¿ø¼Ò Áß¿¡ completion º¤ÅÍ ³»¿¡ Á¸ÀçÇÏÁö ¾Ê´Â ¼±¼ö Ãâ·Â
-// participantº¤ÅÍ, completion º¤ÅÍ Á¤·Ä ÈÄ °°Àº ÀÎµ¦½º º°·Î ºñ±³, ´Ù¸£¸é ±× ¼±¼ö Ãâ·Â
+//participantë²¡í„° ë‚´ ì›ì†Œ ì¤‘ì— completion ë²¡í„° ë‚´ì— ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ì„ ìˆ˜ ì¶œë ¥
+// participantë²¡í„°, completion ë²¡í„° ì •ë ¬ í›„ ê°™ì€ ì¸ë±ìŠ¤ ë³„ë¡œ ë¹„êµ, ë‹¤ë¥´ë©´ ê·¸ ì„ ìˆ˜ ì¶œë ¥
 #include <string>
 #include <vector>
 #include <iostream>
@@ -29,7 +29,7 @@ void main(void) {
 	cout << participant[i] << endl;
 }
 
-//Á¦Ãâ
+//ì œì¶œ
 /*
 #include <string>
 #include <vector>
