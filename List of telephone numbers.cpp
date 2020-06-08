@@ -1,7 +1,7 @@
-//ÇØ½Ã Level 2
+//í•´ì‹œ ì „í™”ë²ˆí˜¸ ëª©ë¡ Level 2
 
-//ÀüÈ­¹øÈ£ºÎ ³» ÇÑ ¹øÈ£°¡ ´Ù¸¥ ¹øÈ£ÀÇ Á¢µÎ¾îÀÎ °æ¿ì Ã£±â
-//phone_book º¤ÅÍ Á¤·Ä ÈÄ n¹øÂ°¿Í n+1¹øÂ°¿¡¼­ 0ºÎÅÍ nÀÇ Å©±â¸¸Å­ÀÇ ¼­ºê½ºÆ®¸µ°ú ºñ±³ ÀÖÀ¸¸é false, ´Ùºñ±³ÈÄ ¾ø´Ù¸é true
+//ì „í™”ë²ˆí˜¸ë¶€ ë‚´ í•œ ë²ˆí˜¸ê°€ ë‹¤ë¥¸ ë²ˆí˜¸ì˜ ì ‘ë‘ì–´ì¸ ê²½ìš° ì°¾ê¸°
+//phone_book ë²¡í„° ì •ë ¬ í›„ në²ˆì§¸ì™€ n+1ë²ˆì§¸ì—ì„œ 0ë¶€í„° nì˜ í¬ê¸°ë§Œí¼ì˜ ì„œë¸ŒìŠ¤íŠ¸ë§ê³¼ ë¹„êµ ìžˆìœ¼ë©´ false, ë‹¤ë¹„êµí›„ ì—†ë‹¤ë©´ true
 #include <string>
 #include <vector>
 #include <iostream>
@@ -22,7 +22,7 @@ int main(void) {
 	printf("true");
 	return 0;
 }
-// Á¦Ãâ
+// ì œì¶œ
 /*
 #include <string>
 #include <vector>
