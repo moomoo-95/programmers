@@ -1,5 +1,6 @@
-// ½ºÅÃ/Å¥ ´Ù¸®¸¦ Áö³ª´Â Æ®·° Level 2
-// Æ®·°ÀÇ ¹«°Ô¿Í ³²Àº °Å¸®¸¦ °¡Áø º¤ÅÍ¸¦ »ý¼ºÇÏ¿© ÃÖ´ëÇÏÁß ³» 1°³¾¿ ÁøÀÔ 0µÇ¸é 1°³¾¿ ºüÁü
+// ìŠ¤íƒ/í ë‹¤ë¦¬ë¥¼ ì§€ë‚˜ëŠ” íŠ¸ëŸ­ Level 2
+
+// íŠ¸ëŸ­ì˜ ë¬´ê²Œì™€ ë‚¨ì€ ê±°ë¦¬ë¥¼ ê°€ì§„ ë²¡í„°ë¥¼ ìƒì„±í•˜ì—¬ ìµœëŒ€í•˜ì¤‘ ë‚´ 1ê°œì”© ì§„ìž… 0ë˜ë©´ 1ê°œì”© ë¹ ì§
 #include <string>
 #include <vector>
 #include <iostream>
@@ -35,7 +36,7 @@ void main(void) {
 	cout << answer << endl;
 }
 
-// Á¦Ãâ
+// ì œì¶œ
 /*
 #include <string>
 #include <vector>
