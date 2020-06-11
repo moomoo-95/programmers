@@ -1,10 +1,10 @@
-create table 'animal_ins' (
-'ANIMAL_ID' VARCHAR(N) not null,
-'ANIMAL_TYPE' VARCHAR(N) not null,
-'DATETIME' VARCHAR(N) not null,
-'INTAKE_CONDITION' VARCHAR(N) not null,
-'NAME' VARCHAR(N) null,
-'SEX_UPON_INTAKE' VARCHAR(N) not null,
+create table "animal_ins" (
+"ANIMAL_ID" VARCHAR(N) not null,
+"ANIMAL_TYPE" VARCHAR(N) not null,
+"DATETIME" VARCHAR(N) not null,
+"INTAKE_CONDITION" VARCHAR(N) not null,
+"NAME" VARCHAR(N) null,
+"SEX_UPON_INTAKE" VARCHAR(N) not null,
 )
 -- 모든 동물의 정보를 ANIMAL_ID순으로 조회
 SELECT * from animal_ins order by animal_id; 
@@ -22,9 +22,9 @@ SELECT animal_id, name, datetime from animal_ins order by name, datetime desc;
 -- 가장 먼저 들어온 동물의 이름을 조회
 SELECT name from animal_ins order by datetime limit 1;
 -- 가장 최근에 들어온 동물은 언제 들어왔는지 조회
-SELECT datetime from animal_ins order by datetime desc limit 1
+SELECT datetime from animal_ins order by datetime desc limit 1;
 -- 가장 먼저 들어온 동물은 언제 들어왔는지 조회
-SELECT datetime from animal_ins order by datetime limit 1
+SELECT datetime from animal_ins order by datetime limit 1;
 -- 동물 보호소에 동물이 몇 마리 들어왔는지 조회
 SELECT count(*) from animal_ins;
 -- 동물의 이름은 몇 개인지 조회 이때 이름이 NULL인 경우는 집계하지 않음
@@ -36,12 +36,12 @@ SELECT animal_type, count(*) from animal_ins
 --      이때 결과는 이름이 없는 동물은 집계에서 제외하며 이름 순
 SELECT name, count(name) from animal_ins group by name having count(name) > 1 order by name;
 
-create table 'animal_outs' (
-'ANIMAL_ID' VARCHAR(N) not null,
-'ANIMAL_TYPE' VARCHAR(N) not null,
-'DATETIME' VARCHAR(N) not null,
-'NAME' VARCHAR(N) null,
-'SEX_UPON_INTAKE' VARCHAR(N) not null,
+create table "animal_outs" (
+"ANIMAL_ID" VARCHAR(N) not null,
+"ANIMAL_TYPE" VARCHAR(N) not null,
+"DATETIME" VARCHAR(N) not null,
+"NAME" VARCHAR(N) null,
+"SEX_UPON_INTAKE" VARCHAR(N) not null,
 )
 -- 9시부터 19시까지, 각 시간대별로 입양이 몇 건이나 발생했는지 조회 이때 결과는 시간대 순
 SELECT hour(datetime), count(*) from animal_outs 
