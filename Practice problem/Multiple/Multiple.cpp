@@ -1,19 +1,22 @@
-// 연습문제 같은 숫자는 싫어 Level 1
+// 연습문제 나누어 떨어지는 숫자 배열 Level 1
 
+#include <string>
 #include <vector>
-#include <iostream>
-
+#include <algorithm>
 using namespace std;
 
-vector<int> solution(vector<int> arr)
-{
+vector<int> solution(vector<int> arr, int divisor) {
 	vector<int> answer;
-	answer.push_back(arr[0]);
-	for (int i = 1; i < arr.size(); i++) {
-		if (answer[answer.size() - 1] != arr[i]) {
+	for (int i = 0; i < arr.size(); i++) {
+		if (arr[i] % divisor == 0) {
 			answer.push_back(arr[i]);
 		}
 	}
-
+	if (answer.empty()) {
+		answer.push_back(-1);
+	}
+	else {
+		sort(answer.begin(), answer.end());
+	}
 	return answer;
 }
