@@ -1,22 +1,22 @@
-// 연습문제 나누어 떨어지는 숫자 배열 Level 1
+// 연습문제 두 정수 사이의 합 Level 1
 
 #include <string>
 #include <vector>
-#include <algorithm>
+
 using namespace std;
 
-vector<int> solution(vector<int> arr, int divisor) {
-	vector<int> answer;
-	for (int i = 0; i < arr.size(); i++) {
-		if (arr[i] % divisor == 0) {
-			answer.push_back(arr[i]);
-		}
+long long add(int a, int b) {
+	long long result = 0;
+	for (int i = a; i <= b; i++) {
+		result += i;
 	}
-	if (answer.empty()) {
-		answer.push_back(-1);
-	}
-	else {
-		sort(answer.begin(), answer.end());
-	}
+	return result;
+}
+
+long long solution(int a, int b) {
+	long long answer = 0;
+	if (a == b) { answer = a; }
+	else if (a < b) { answer = add(a, b); }
+	else { answer = add(b, a); }
 	return answer;
 }
