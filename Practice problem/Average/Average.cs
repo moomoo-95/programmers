@@ -1,4 +1,4 @@
-// 연습문제 2016 Level 1
+// 연습문제 평균 구하기 Level 1
 
 public class Solution {
     public double solution(int[] arr) {
