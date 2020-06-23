@@ -1,10 +1,11 @@
-// 연습문제 2016 Level 1
+// 연습문제 짝수와 홀수  Level 1
 
 class Solution {
-    public String solution(int a, int b) {
-        int[] month = {0, 31, 60, 91, 121, 152, 182,213, 244, 274, 305, 335};
-        String[] day = {"THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"};
-        String answer = day[(month[a-1] + b) % 7];
+    public String solution(int num) {
+        String answer = "Even";
+        if(num % 2 == 1 || num % 2 == -1) {
+            answer = "Odd";
+        }
         return answer;
     }
 }
