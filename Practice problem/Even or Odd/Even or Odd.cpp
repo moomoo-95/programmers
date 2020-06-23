@@ -1,4 +1,4 @@
-// 연습문제 짝수와  Level 1
+// 연습문제 짝수와 홀수  Level 1
 
 #include <string>
 #include <vector>
