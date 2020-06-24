@@ -1,11 +1,16 @@
-// 연습문제 평균 구하기 Level 1
+// 연습문제 수박수박수박수? Level 1
 
 public class Solution {
-    public double solution(int[] arr) {
-        double answer = 0;
-        for(int i = 0; i < arr.Length; i++){
-            answer += arr[i];
+    public string solution(int n) {
+        string answer = "";
+        for (int i = 0 ; i < n ; i++){
+            if (i % 2 == 0){
+                answer = answer + "수";
+            }
+            else{
+                answer = answer + "박";
+            }
         }
-        return answer / arr.Length;
+        return answer;
     }
 }
