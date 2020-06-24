@@ -1,7 +1,10 @@
-# 연습문제 평균 구하기 Level 1
+# 연습문제 수박수박수박수? Level 1
 
-def solution(arr):
-    answer = 0
-    for i in range(len(arr)) :
-        answer = answer + arr[i]
-    return answer / len(arr)
+def solution(n):
+    answer = ''
+    for i in range(n) :
+        if i % 2 == 0 :
+            answer = answer + '수'
+        else :
+            answer = answer + '박'
+    return answer
