@@ -1,13 +1,19 @@
-// 연습문제 평균 구하기 Level 1
+// 연습문제 수박수박수박수? Level 1
 
+#include <string>
 #include <vector>
 
 using namespace std;
 
-double solution(vector<int> arr) {
-    double answer = 0;
-    for(int i = 0; i < arr.size(); i++){
-        answer += arr[i];
+string solution(int n) {
+    string answer = "";
+    for (int i = 0 ; i < n ; i++){
+        if (i % 2 == 0){
+            answer.append("수");
+        }
+        else{
+            answer.append("박");
+        }
     }
-    return answer / arr.size();
+    return answer;
 }
