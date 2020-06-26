@@ -1,14 +1,18 @@
-// 연습문제 짝수와 홀수  Level 1
+// 연습문제 직사각형 별찍기  Level 1
 
-#include <string>
-#include <vector>
+#include <iostream>
 
 using namespace std;
 
-string solution(int num) {
-    string answer = "Even";
-    if(num % 2 == 1 || num % 2 == -1) {
-        answer = "Odd";
+int main(void) {
+    int a;
+    int b;
+    cin >> a >> b;
+    for(int i = 0; i < b; i++){
+        for(int j = 0; j < a; j++){
+            printf("*");
+        }
+        printf("\n");
     }
-    return answer;
+    return 0;
 }
