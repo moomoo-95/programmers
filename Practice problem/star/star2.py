@@ -1,7 +1,5 @@
-# 연습문제 짝수와 홀수  Level 1
+# 연습문제 직사각형 별찍기  Level 1
 
-def solution(num):
-    answer = 'Even'
-    if (num % 2 == 1) | (num % 2 == -1) :
-        answer = 'Odd'
-    return answer
+a, b = map(int, raw_input().strip().split(' '))
+for i in range(b) :
+    print("*"*a)
