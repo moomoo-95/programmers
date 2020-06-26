@@ -1,11 +1,23 @@
-// 연습문제 짝수와 홀수  Level 1
+// 연습문제 직사각형 별찍기  Level 1
 
-public class Solution {
-    public string solution(int num) {
-        string answer = "Even";
-        if(num % 2 == 1 || num % 2 == -1) {
-            answer = "Odd";
+using System;
+
+public class Example
+{
+    public static void Main()
+    {
+        String[] s;
+
+        Console.Clear();
+        s = Console.ReadLine().Split(' ');
+
+        int a = Int32.Parse(s[0]);
+        int b = Int32.Parse(s[1]);
+        for(int i = 0; i < b; i++){
+            for(int j = 0; j < a; j++){
+                Console.Write("*");
+            }
+            Console.Write("\n");
         }
-        return answer;
     }
 }
