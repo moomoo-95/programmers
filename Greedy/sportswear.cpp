@@ -1,75 +1,47 @@
-// ¿ÏÀüÅ½»ö ¸ğÀÇ°í»ç Level 1
+// ê·¸ë¦¬ë”” ì²´ìœ¡ë³µ Level 1
 
-//¼öÆ÷ÀÚÁß Á¡¼ö Á¦ÀÏ ³ôÀº »ç¶÷ Ã£±â, ÆĞÅÏÀ¸·Î Á¤´äºñ±³
+//ë„ë‚œë‹¹í•œ ì¹œêµ¬ë“¤ ì²´ìœ¡ë³µ ë¹Œë ¤ì£¼ê¸°
 #include <string>
 #include <vector>
-#include <algorithm>
-#include <iostream>
 
 using namespace std;
 
-bool desc(pair<int, int> a, pair<int, int> b) {
-	return a.first > b.first;
-}
-
-void main() {
-	vector<int> answers = {1, 2, 3, 4, 5};
-	vector<int> answer;
-	vector<int> they(3);
-	vector<int> one = { 1,2,3,4,5 };
-	vector<int> two = { 2,1,2,3,2,4,2,5 };
-	vector<int> thr = { 3,3,1,1,2,2,4,4,5,5 };
-
-	for (int i = 0; i<answers.size(); i++) {
-		if (answers[i] == one[i%one.size()]) they[0]++;
-		if (answers[i] == two[i%two.size()]) they[1]++;
-		if (answers[i] == thr[i%thr.size()]) they[2]++;
-	}
-	int they_max = *max_element(they.begin(), they.end());
-	for (int i = 0; i< 3; i++) {
-		if (they[i] == they_max) answer.push_back(i + 1);
-	}
-
-	for (int i = 0; i < answer.size(); i++) {
-		cout << answer[i] << endl;
-	}
-}
-
-// Á¦Ãâ
-/*
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <iostream>
-
-using namespace std;
-
-bool desc(pair<int, int> a, pair<int, int> b) {
-	return a.first > b.first;
-}
-
-vector<int> solution(vector<int> answers) {
-    vector<int> answer;
-	vector<int> sec = {1, 3, 4, 5};
-	vector<int> thi = { 3, 1, 2, 4, 5 };
-	vector<pair<int, int>> count = {make_pair(0,1), make_pair(0,2), make_pair(0,3) };
-    
-	for (int i = 0; i < answers.size(); i++) {
-		if (answers[i] == 1 + i % 5) { count[0].first++; }
-		if (i % 2 == 0 ) {
-			if (answers[i] == 2) { count[1].first++; }
-			if (answers[i] == thi[(i / 2) % 5]) { count[2].first++; }
-		}
-		else {
-			if (answers[i] == sec[((i-1)/2)%4]) { count[1].first++; }
-			if (answers[i] == thi[((i - 1) / 2) % 5]) { count[2].first++; }
-		}
-	}
-	sort(count.begin(), count.end(), desc);
-	for(int i = 0; i < 3 && count[i].first == count[0].first; i++) {
-		answer.push_back(count[i].second);
-	}
-    
+int solution(int n, vector<int> lost, vector<int> reserve) {
+    vector<int> stu;
+    for(int i = 0; i < n; i++){
+        stu.push_back(1);
+    }
+    for(int i = 0; i < lost.size(); i++){
+        stu[lost[i]-1]--;
+    }
+    for(int i = 0; i < reserve.size(); i++){
+        stu[reserve[i]-1]++;
+    }
+    for(int i = 0; i < stu.size()-1; i++){
+        if(stu[i] == 0 && i == 0){
+            if(stu[i+1] == 2){
+                stu[i]++;
+                stu[i+1]--;
+            }
+        }
+        else if(stu[i] == 0 && stu[i-1] == 2){
+            stu[i]++;
+            stu[i-1]--;
+        }
+        else if(stu[i] == 0 && stu[i+1] == 2){
+            stu[i]++;
+            stu[i+1]--;
+        }
+        else if((stu[i] == 2 && i == stu.size()-2) && stu[i+1] == 0){
+            stu[i]--;
+            stu[i+1]++;
+            
+        }
+    }
+    int answer = 0;
+    for(int i = 0; i < stu.size(); i++){
+        printf("%d ", stu[i]);
+        if(stu[i] >= 1){ answer++;}
+    }
     return answer;
 }
-*/
