@@ -1,3 +1,5 @@
+# 연습문제 하샤드 수 Level 1
+
 def solution(x):
     z = x
     y = 0
