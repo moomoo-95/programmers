@@ -1,3 +1,5 @@
+// 연습문제 하샤드 수 Level 1
+
 public class Solution {
     public bool solution(int x) {
         int z = x;
