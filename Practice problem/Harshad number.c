@@ -1,3 +1,5 @@
+// 연습문제 하샤드 수 Level 1
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
