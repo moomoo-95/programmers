@@ -1,4 +1,4 @@
-// 하샤드 수
+// 연습문제 하샤드 수 Level 1
 
 class Solution {
     public boolean solution(int x) {
