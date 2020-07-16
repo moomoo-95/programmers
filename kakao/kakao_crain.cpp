@@ -1,6 +1,6 @@
-//ÀÎÇü»Ì±â
+// 2020ì¹´ì¹´ì˜¤ì¸í„´ì‰½ ì¸í˜•ë½‘ê¸°
 
-// moves¿¡¼­ Á¦½ÃÇÑ ¿­À» À§¿¡ºÎÅÍ Â÷·Ê·Î Å½»öÇÏ¿© stick¿¡ ³Ö°í top°ú °°À¸¸é ¾È³Ö°í 2¸¦´õÇÔ
+// movesì—ì„œ ì œì‹œí•œ ì—´ì„ ìœ„ì—ë¶€í„° ì°¨ë¡€ë¡œ íƒìƒ‰í•˜ì—¬ stickì— ë„£ê³  topê³¼ ê°™ìœ¼ë©´ ì•ˆë„£ê³  2ë¥¼ë”í•¨
 #include <string>
 #include <vector>
 #include <stack>
@@ -37,7 +37,7 @@ void main() {
 	cout << answer << endl;
 }
 
-//Á¦Ãâ
+//ì œì¶œ
 /*
 #include <string>
 #include <vector>
