@@ -1,4 +1,4 @@
-// 자릿수 더하기
+// 연습문제 자릿수 더하기 Level 1
 
 #include <stdio.h>
 #include <stdbool.h>
