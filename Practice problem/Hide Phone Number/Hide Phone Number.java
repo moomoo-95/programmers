@@ -1,3 +1,5 @@
+// 연습문제 핸드폰 번호 가리기 Level
+
 class Solution {
     public String solution(String phone_number) {
         int len = phone_number.length();
