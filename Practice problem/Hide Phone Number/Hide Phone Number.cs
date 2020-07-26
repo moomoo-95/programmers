@@ -1,4 +1,4 @@
-//
+// 연습문제 핸드폰 번호 가리기 Level
 
 public class Solution {
     public string solution(string phone_number) {
