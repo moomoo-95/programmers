@@ -1,4 +1,4 @@
-//
+// 연습문제 124 나라의 숫자 Level 1
 
 class Solution {
     public String solution(int n) {
