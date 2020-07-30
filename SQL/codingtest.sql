@@ -7,15 +7,20 @@ create table "animal_ins" (
 "SEX_UPON_INTAKE" VARCHAR(N) not null,
 )
 -- 모든 동물의 정보를 ANIMAL_ID순으로 조회
-SELECT * from animal_ins order by animal_id; 
+SELECT * from animal_ins order by animal_id;
+
 -- 모든 동물의 이름과 보호 시작일을 ANIMAL_ID 역순으로 조회
 SELECT name, datetime from animal_ins order by animal_id desc;
+
 -- Sick인 동물의 아이디와 이름을 아이디 순으로 조회
 SELECT animal_id, name from animal_ins where intake_condition = "Sick" order by animal_id;
+
 -- Aged가 아닌 동물의 아이디와 이름을 아이디 순으로 조회
 SELECT animal_id, name from animal_ins where intake_condition != "Aged" order by animal_id;
+
 -- 모든 동물의 아이디와 이름을 ANIMAL_ID순으로 조회
 SELECT animal_id, name from animal_ins order by animal_id;
+
 -- 모든 동물의 아이디와 이름, 보호 시작일을 이름 순,
 --      이름이 같은 동물 중에서는 보호를 나중에 시작한 동물 순으로 조회
 SELECT animal_id, name, datetime from animal_ins order by name, datetime desc;
