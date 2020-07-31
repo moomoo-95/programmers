@@ -8,19 +8,10 @@ public class Solution
         ArrayList answer = new ArrayList();
         for (int i = 0; i < arr.Length; i++)
         {
-            if (arr[i] % divisor == 0)
-            {
-                answer.Add(arr[i]);
-            }
+            if (arr[i] % divisor == 0) { answer.Add(arr[i]); }
         }
-        if (answer.Count == 0)
-        {
-            answer.Add(-1);
-        }
-        else
-        {
-            answer.Sort();
-        }
+        if (answer.Count == 0) { answer.Add(-1); }
+        else { answer.Sort(); }
         return (int[])answer.ToArray(typeof(int));
     }
 }
