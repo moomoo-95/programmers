@@ -13,5 +13,6 @@ bool solution(int x) {
         x /= 10;
     }
     if(z % y == 0){ return true; }
+    
     return false;
 }
