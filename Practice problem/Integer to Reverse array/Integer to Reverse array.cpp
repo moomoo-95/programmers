@@ -1,4 +1,4 @@
-//
+// 연습문제 자연수 뒤집어 배열로 만들기 Level 1
 
 #include <vector>
 using namespace std;
