@@ -8,6 +8,6 @@ class Solution {
             else if(s.charAt(i) == 'y' || s.charAt(i) == 'Y'){ count--; }
         }
         if(count == 0){ return true; }
-        else{ return false; }
+        return false;
     }
 }
