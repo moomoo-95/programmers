@@ -1,8 +1,5 @@
 // 연습문제 콜라츠 추측 Level 1
 
-#include <string>
-#include <vector>
-
 using namespace std;
 
 int solution(int num) {
