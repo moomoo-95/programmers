@@ -1,4 +1,4 @@
-//
+// 연습문제 행렬의 곱셈 Level 2
 
 #include <vector>
 
