@@ -4,8 +4,7 @@
 #include <iostream>
 using namespace std;
 
-bool solution(string s)
-{
+bool solution(string s){
     int count = 0;
     for(int i = 0; i < s.length(); i++){
         if(s.at(i) == 'p' || s.at(i) == 'P'){ count++; }
