@@ -1,7 +1,6 @@
 // 연습문제 문자열 다루기 기본 Level 1
 
 #include <string>
-#include <vector>
 
 using namespace std;
 
