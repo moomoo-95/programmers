@@ -1,15 +1,12 @@
 // 연습문제 두 정수 사이의 합 Level 1
 
 #include <string>
-#include <vector>
 
 using namespace std;
 
 long long add(int a, int b) {
 	long long result = 0;
-	for (int i = a; i <= b; i++) {
-		result += i;
-	}
+	for (int i = a; i <= b; i++) { result += i; }
 	return result;
 }
 
