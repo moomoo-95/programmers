@@ -1,8 +1,5 @@
 // 연습문제 2 x n 타일링 Level 3
 
-#include <string>
-#include <vector>
-
 using namespace std;
 int dp[60000] = {0};
 int func(int n){
