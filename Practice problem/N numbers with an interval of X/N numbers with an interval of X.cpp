@@ -1,6 +1,5 @@
 // 연습문제 x만큼 간격이 있는 n개의 숫자 Level 1
 
-#include <string>
 #include <vector>
 
 using namespace std;
