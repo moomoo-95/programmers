@@ -2,8 +2,8 @@
 
 #include <string>
 #include <vector>
-
 #include <iostream>
+
 using namespace std;
 
 int center(int a, int b) {
