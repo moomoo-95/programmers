@@ -1,7 +1,7 @@
-// ╫╨ец/е╔ е╬ Level 2
+// Л┼╓М┐²/М│░ М┐▒ Level 2
 
-//╪ш╫е е╬ ╫ехё╦╕ ╪Ж╫его╢б ╪Ж╫ее╬ ╧Х©╜ ╠╦го╠Б
-// 0ю╨ 0юл╟М 1╨нем ╫цюшгь╪╜ ╬у ╪Ж╫ее╬╣Ию╩ ©╙╪Ью╦╥н а╤х╦го©╘ ╟║юЕ ╦уюЗ ╪ш╫е е╬╨╦╢ы ЁТю╨ ╪Ж╫ее╬ ╧щх╞
+//Л├║Л▀═ М┐▒ Л▀═М≤╦К╔╪ Л┬≤Л▀═М∙≤К┼■ Л┬≤Л▀═М┐▒ К╟╟Л≈╢ Й╣╛М∙≤Й╦╟
+// 0Л²─ 0Л²╢ЙЁ═ 1К╤─М└╟ Л▀°Л·▒М∙╢Л└° Л∙· Л┬≤Л▀═М┐▒К⌠╓Л²└ Л≈╜Л┬°Л°╪К║° Л║╟М ▄М∙≤Л≈╛ Й╟─Л·╔ К╗╪Л═─ Л├║Л▀═ М┐▒КЁ╢К▀╓ К├▓Л²─ Л┬≤Л▀═М┐▒ К╟≤М≥≤
 #include <string>
 #include <vector>
 #include <iostream>
@@ -12,11 +12,13 @@ void main(void) {
 	//vector<int> heights = {6, 9, 5, 7, 4};
 	vector<int> heights = { 6, 9, 5, 7, 4 };
 	vector<int> answer;
+	
 	for (int i = 0; i < heights.size(); i++) {
 		cout << heights[i] << " ";
 	}
 	cout << endl;
 	answer.push_back(0);
+	
 	for (int i = 1; i < heights.size(); i++) {
 		for (int j = i-1; j > -1; j--) {
 			if (heights[i] < heights[j]) { 
@@ -34,7 +36,7 @@ void main(void) {
 
 }
 
-// а╕цБ
+// Л═°Л╤°
 /*
 #include <string>
 #include <vector>
