@@ -1,6 +1,6 @@
-// Èü ´õ ¸Ê°Ô Level 2
+// í™ ë” ë§µê²Œ Level 2
 
-// ¿ì¼±¼øÀ§ Å¥·Î min heap ±¸Á¶¸¦ ¸¸µê, ÀÛÀº µÎ°³»©¼­ ¿¬»ê ÈÄ »ğÀÔ
+// ìš°ì„ ìˆœìœ„ íë¡œ min heap êµ¬ì¡°ë¥¼ ë§Œë“¦, ì‘ì€ ë‘ê°œë¹¼ì„œ ì—°ì‚° í›„ ì‚½ì…
 #include <string>
 #include <vector>
 #include <queue>
@@ -20,6 +20,7 @@ void main() {
 
 	while (temp.top() < K) {
 		shake = 0;
+		
 		if (temp.size() == 1) {
 			answer = -1;
 			break;
@@ -35,7 +36,7 @@ void main() {
 	cout << answer << endl;
 }
 
-// Á¦Ãâ
+// ì œì¶œ
 /*
 #include <string>
 #include <vector>
