@@ -1,6 +1,6 @@
-// ¿ÏÀüÅ½»ö ¸ğÀÇ°í»ç Level 1
+// ì™„ì „íƒìƒ‰ ëª¨ì˜ê³ ì‚¬ Level 1
 
-//¼öÆ÷ÀÚÁß Á¡¼ö Á¦ÀÏ ³ôÀº »ç¶÷ Ã£±â, ÆĞÅÏÀ¸·Î Á¤´äºñ±³
+//ìˆ˜í¬ìì¤‘ ì ìˆ˜ ì œì¼ ë†’ì€ ì‚¬ëŒ ì°¾ê¸°, íŒ¨í„´ìœ¼ë¡œ ì •ë‹µë¹„êµ
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -25,6 +25,7 @@ void main() {
 		if (answers[i] == two[i%two.size()]) they[1]++;
 		if (answers[i] == thr[i%thr.size()]) they[2]++;
 	}
+	
 	int they_max = *max_element(they.begin(), they.end());
 	for (int i = 0; i< 3; i++) {
 		if (they[i] == they_max) answer.push_back(i + 1);
@@ -35,7 +36,7 @@ void main() {
 	}
 }
 
-// Á¦Ãâ
+// ì œì¶œ
 /*
 #include <string>
 #include <vector>
