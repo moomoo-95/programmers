@@ -1,7 +1,7 @@
-// Á¤·Ä K¹øÂ° ¼ö Level 1
+// ì •ë ¬ Kë²ˆì§¸ ìˆ˜ Level 1
 
-// ¹è¿­¿¡¼­ i¹øÂ°ºÎÅÍ j¹øÂ°±îÁö ¼ö Áß k¹øÂ° ¼ö Ãâ·Â
-// ¹è¿­À» ÀÓ½Ã¹è¿­¿¡ ÀúÀåÇÏ°í ÀÎµ¦½º i-1~j¸¸Å­ Á¤·Ä ÈÄ ÀÎµ¦½º°¡ i+k-2ÀÎ °ª Ãâ·Â
+// ë°°ì—´ì—ì„œ ië²ˆì§¸ë¶€í„° jë²ˆì§¸ê¹Œì§€ ìˆ˜ ì¤‘ kë²ˆì§¸ ìˆ˜ ì¶œë ¥
+// ë°°ì—´ì„ ìž„ì‹œë°°ì—´ì— ì €ìž¥í•˜ê³  ì¸ë±ìŠ¤ i-1~jë§Œí¼ ì •ë ¬ í›„ ì¸ë±ìŠ¤ê°€ i+k-2ì¸ ê°’ ì¶œë ¥
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -13,13 +13,16 @@ void main(void) {
 	vector<vector<int>> commands{ {2, 5, 3}, {4, 4, 1}, {1, 7, 3} };
 	vector<int> temp;
 	vector<int> answer;
+	
 	for (int i = 0; i < array.size(); i++) {
 		cout << array[i] << " ";
 	}
 	cout << endl;
+	
 	for (int i = 0; i < commands.size(); i++) {
 		cout << commands[i][0] << " " << commands[i][1] << " " << commands[i][2] << endl;
 	}
+	
 	for (int i = 0; i < commands.size(); i++) {
 		temp = array;
 		sort(temp.begin() + commands[i][0]-1, temp.begin() + commands[i][1]);
@@ -30,7 +33,7 @@ void main(void) {
 	}
 }
 
-// Á¦Ãâ
+// ì œì¶œ
 /*
 #include <string>
 #include <vector>
