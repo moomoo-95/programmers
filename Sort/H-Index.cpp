@@ -1,8 +1,7 @@
-// Á¤·Ä H-Index Level 2
+// ì •ë ¬ H-Index Level 2
 
-// H-index n°³ÀÇ ³í¹®Áß h¹ø ÀÌ»ó ÀÎ¿ëµÈ ³í¹®ÀÌ hÆíÀÌ°í ³ª¸ÓÁö ³í¹®ÀÌ h ÀÌÇÏ·Î ÀÎ¿ëµÇ¾úÀ» ¶§ hÀÇ ÃÖ´ë°ª
-// size°¡ ÁÙ¾îµé¸é¼­ ¸ğµç ¿ø¼Ò°¡ citations[i]ÀÎ³ğÀÇ h-indexÀÇ ÁıÇÕÀÌ °ğ ±âÁ¸ÀÇ º¤ÅÍÀÇ h-index°ª
-#include <string>
+// H-index nê°œì˜ ë…¼ë¬¸ì¤‘ hë²ˆ ì´ìƒ ì¸ìš©ëœ ë…¼ë¬¸ì´ hí¸ì´ê³  ë‚˜ë¨¸ì§€ ë…¼ë¬¸ì´ h ì´í•˜ë¡œ ì¸ìš©ë˜ì—ˆì„ ë•Œ hì˜ ìµœëŒ€ê°’
+// sizeê°€ ì¤„ì–´ë“¤ë©´ì„œ ëª¨ë“  ì›ì†Œê°€ citations[i]ì¸ë†ˆì˜ h-indexì˜ ì§‘í•©ì´ ê³§ ê¸°ì¡´ì˜ ë²¡í„°ì˜ h-indexê°’
 #include <vector>
 #include <algorithm>
 #include <iostream>
@@ -32,7 +31,7 @@ void main(void) {
 
 }
 
-// Á¦Ãâ
+// ì œì¶œ
 /*
 #include <string>
 #include <vector>
