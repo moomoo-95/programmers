@@ -1,7 +1,6 @@
 // 힙 더 맵게 Level 2
 
 // 우선순위 큐로 min heap 구조를 만듦, 작은 두개빼서 연산 후 삽입
-#include <string>
 #include <vector>
 #include <queue>
 #include <functional>
