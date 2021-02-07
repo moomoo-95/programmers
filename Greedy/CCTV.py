@@ -8,8 +8,10 @@ def solution(routes):
         sole = True
         check = [routes[k][0], routes[k][1]]
         k += 1
+        
         for i in range(k, len(routes)):
             check = [max(check[0], routes[i][0]), min(check[1], routes[i][1])]
+            
             if(check[0] <= check[1]):
                 continue
             else:
