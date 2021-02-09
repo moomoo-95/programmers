@@ -2,8 +2,7 @@
 # 아스키 코드 A Z, 65 90
 def solution(name):
     change = [min(ord(i) - ord('A'), ord('Z') - ord(i) + 1) for i in name]
-    answer = 0
-    cursor = 0
+    answer, cursor = 0, 0
     
     while (True):
         answer += change[cursor]
