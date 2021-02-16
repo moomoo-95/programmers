@@ -1,6 +1,6 @@
 
 -- SELECT * FROM * WHERE * GROUP BY * HAVING (GROUP BY의 WHERE)
--- INNER JOIN * ON *
+-- INNER JOIN * ON * // LEFT (OUTER) JOIN * ON * // RIGHT (OUTER) JOIN * ON *
 -- ORDER BY [ASC, DESC] // LIMIT n
 -- LIKE %a // IN ()
 -- COUNT(*) / COUNT( DISTINCT COLUMN ) 중복제거
@@ -123,3 +123,30 @@ SELECT ins.ANIMAL_ID, ins.NAME
         
 -- 5. 형변환
 SELECT ANIMAL_ID, NAME, DATE_FORMAT(DATETIME, "%Y-%m-%d") AS "날짜" FROM ANIMAL_INS
+
+-- JOIN
+-- 1. 빈공간 찾기
+SELECT o.ANIMAL_ID, o.NAME
+    FROM ANIMAL_INS AS i RIGHT OUTER JOIN ANIMAL_OUTS AS o
+        ON i.ANIMAL_ID = o.ANIMAL_ID
+            WHERE i.ANIMAL_ID is NULL;
+            
+-- 2. 일 차가 음수인 것 고르기
+SELECT i.ANIMAL_ID, i.NAME
+    FROM ANIMAL_INS AS i INNER JOIN ANIMAL_OUTS AS o
+        ON i.ANIMAL_ID = o.ANIMAL_ID
+            WHERE o.DATETIME < i.DATETIME
+                ORDER BY i.DATETIME;
+-- 3. 미입양 중 가장 오래된 동물
+SELECT i.NAME, i.DATETIME
+    FROM ANIMAL_INS i LEFT JOIN ANIMAL_OUTS o
+        ON i.ANIMAL_ID = o.ANIMAL_ID
+            WHERE o.DATETIME IS NULL ORDER BY i.DATETIME LIMIT 3;
+
+-- 4. 보호전 중성화X 입양전 중성화O인 동물
+SELECT o.ANIMAL_ID, o.ANIMAL_TYPE, o.NAME
+    FROM ANIMAL_INS i RIGHT JOIN ANIMAL_OUTS o
+        ON i.ANIMAL_ID = o.ANIMAL_ID
+            WHERE i.SEX_UPON_INTAKE LIKE "Intact%"
+                AND (o.SEX_UPON_OUTCOME LIKE "Spayed%" OR o.SEX_UPON_OUTCOME LIKE "Neutered%");
+           
