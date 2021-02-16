@@ -1,9 +1,11 @@
 
 -- SELECT * FROM * WHERE * GROUP BY * HAVING (GROUP BY의 WHERE)
--- ORDER BY [ASC, DESC] / LIMIT n
+-- INNER JOIN * ON *
+-- ORDER BY [ASC, DESC] // LIMIT n
+-- LIKE %a // IN ()
 -- COUNT(*) / COUNT( DISTINCT COLUMN ) 중복제거
 -- SET @VAR = 1; 변수선언
--- YEAR(), MOUNTH(), HOUR(), MINUTE(), SECOND(), NOW(), 
+-- YEAR(), MOUNTH(), HOUR(), MINUTE(), SECOND(), NOW(), DATE_FORMAT(DATETIME, )
 -- CASE WHEN * THEN * ... ELSE * END
 -- IFNULL(COLUMN, VAR) // IF(조건, TRUE VAR, FALSE VAR) // VAR IS NULL // VAR IS NOT NULL
 
@@ -102,3 +104,22 @@ SELECT animal_type, ifnull(name, "No name"), SEX_UPON_INTAKE
     from animal_ins order by animal_id;
 
 -- String, Date
+-- 1.이름 같은 동물 찾기
+SELECT ANIMAL_ID, NAME, SEX_UPON_INTAKE 
+    FROM ANIMAL_INS 
+        WHERE NAME IN ("Lucy", "Ella", "Pickle", "Rogan", "Sabrina", "Mitty");
+        
+-- 2. 포함하는 문자 찾기
+SELECT ANIMAL_ID, NAME FROM ANIMAL_INS WHERE NAME LIKE "%el%" AND ANIMAL_TYPE = "Dog" ORDER BY NAME;
+
+-- 3. 여부 파악하여 다르게 출력하기
+SELECT ANIMAL_ID, NAME, IF(SEX_UPON_INTAKE LIKE "Neutered%" OR SEX_UPON_INTAKE LIKE "Spayed%", "O", "X") AS "중성화"
+    FROM ANIMAL_INS;
+    
+-- 4. 날짜 간격 최대값 찾기
+SELECT ins.ANIMAL_ID, ins.NAME
+    FROM ANIMAL_INS AS ins INNER JOIN ANIMAL_OUTS AS outs ON ins.ANIMAL_ID = outs.ANIMAL_ID
+        ORDER BY DATEDIFF(outs.DATETIME, ins.DATETIME) DESC LIMIT 2;
+        
+-- 5. 형변환
+SELECT ANIMAL_ID, NAME, DATE_FORMAT(DATETIME, "%Y-%m-%d") AS "날짜" FROM ANIMAL_INS
