@@ -1,5 +1,5 @@
 -- REGEXP '' 정규표현식
--- RIGHT(str, 3) 부분문자열 
+-- LEFT,MID,RIGHT(str, 3) 부분문자열 CONCAT(, , ,) 문자열 결합
 
 -- Revising the Select Query I
 SELECT * FROM CITY WHERE POPULATION > 100000 AND COUNTRYCODE = "USA";
