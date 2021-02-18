@@ -58,3 +58,17 @@ SELECT Name FROM STUDENTS WHERE Marks > 75 ORDER BY RIGHT(Name, 3), ID;
 
 -- Employee Names
 SELECT name FROM Employee ORDER BY name;
+
+-- Type of Triangle
+SELECT CASE WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle'
+            WHEN (A = B) AND (B = C) THEN 'Equilateral'
+            WHEN (A = B) OR (B = C) OR (A = C) THEN 'Isosceles'
+            ELSE 'Scalene'
+        END
+        FROM TRIANGLES;
+        
+-- The PADS
+SELECT CONCAT(Name,'(', LEFT(Occupation, 1), ')')
+    FROM OCCUPATIONS ORDER BY Name, Occupation;
+SELECT CONCAT('There are a total of ', COUNT(Occupation), ' ', LOWER(Occupation), 's.')
+    FROM OCCUPATIONS GROUP BY Occupation ORDER BY COUNT(Occupation), Occupation;
