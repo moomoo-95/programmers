@@ -1,4 +1,5 @@
 -- REGEXP '' 정규표현식
+-- RIGHT(str, 3) 부분문자열 
 
 -- Revising the Select Query I
 SELECT * FROM CITY WHERE POPULATION > 100000 AND COUNTRYCODE = "USA";
@@ -32,7 +33,28 @@ SELECT CITY, LENGTH(CITY) FROM STATION ORDER BY LENGTH(CITY), CITY LIMIT 1;
 SELECT CITY, LENGTH(CITY) FROM STATION ORDER BY LENGTH(CITY) DESC, CITY LIMIT 1;
 
 -- Weather Observation Station 6
-SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '^[a,e,i,o,u]';
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '^[aeiou]';
 
 -- Weather Observation Station 7
-SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '[a,e,i,o,u]$'; 
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '[aeiou]$'; 
+
+-- Weather Observation Station 8
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '^[aeiou].*[aeiou]$';
+
+-- Weather Observation Station 9
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP('^[^aeiou]');
+
+-- Weather Observation Station 10
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP('[^aeiou]$');
+
+-- Weather Observation Station 11
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP('^[^aeiou]|[^aeiou]$');
+
+-- Weather Observation Station 12
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '^[^aeiou].*[^aeiou]$';
+
+-- Higher Than 75 Marks
+SELECT Name FROM STUDENTS WHERE Marks > 75 ORDER BY RIGHT(Name, 3), ID;
+
+-- Employee Names
+SELECT name FROM Employee ORDER BY name;
