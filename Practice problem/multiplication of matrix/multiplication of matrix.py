@@ -1,3 +1,4 @@
+# 연습문제 행렬의 곱셈 Level 2
 
 def solution(arr1, arr2):
     answer = []
