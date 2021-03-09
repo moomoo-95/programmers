@@ -1,4 +1,4 @@
-# 이분탐색 level 3 징검다리
+# 이분탐색 level 4 징검다리
 
 def solution(distance, rocks, n):
     answer, left, right = 0, 1, distance
